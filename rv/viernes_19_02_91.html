@@ -10,7 +10,7 @@
         </style>
       </head>
       <body>
-        <script scr="three.min.js">>/script>
+        <script scr="three.min.js"></script>
         <script>
           var escena=new THREE.Scene();
           var fov = 75; //campo de visión
@@ -23,7 +23,7 @@
           renderer.setsize(window.innerWidth, window.innerHeight);
           document.body.appendClid(renderer.domElement);
           
-          var forma =new THREE.BoxGeometry (1,1,1,1);
+          var forma =new THREE.BoxGeometry (1,1,1);
           var material=new THREE.MeshBasicMaterial({color:0x00ff00});
           var cubo=new THREE.Mesh(forma, material);
           escena.add(cubo);
