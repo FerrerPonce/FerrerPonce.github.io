@@ -24,7 +24,7 @@
           renderer.setSize(window.innerWidth, window.innerHeight);
           document.body.appendChild(renderer.domElement);
           
-          var forma =new THREE.TorusGeometry (5,6);
+          var forma =new THREE.TorusGeometry (10, 3, 16, 100 );
           var material=new THREE.MeshNormalMaterial();
           var toroide=new THREE.Mesh(forma, material);
           escena.add(toroide);
