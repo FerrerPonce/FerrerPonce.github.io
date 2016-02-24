@@ -18,7 +18,7 @@
           var near=0.1;//plano cercano
           var far=100;//plano lejano
           var camara=new THREE.PerspectiveCamera (fov, aspect, near, far );
-          camara.position.z=5;
+          camara.position.z=500;
           var renderer=new THREE.WebGLRenderer();
           
           renderer.setSize(window.innerWidth, window.innerHeight);
@@ -33,7 +33,7 @@
           // para desarrollar la malla hay que desarrollar la forma
           
           var forma =new THREE.ShapeGeometry(figura);
-          var malla= new THREE.Mesh(foma);
+          var malla= new THREE.Mesh(forma);
           escena.add(malla);
           function loop(){
             requestAnimationFrame(loop);
