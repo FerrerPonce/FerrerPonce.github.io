@@ -19,7 +19,7 @@ THREE.GeometryUtils.merge(forma,cilindro);
 malla =new THREE.Mesh(forma);
 //wireframe=new THREE.Scene();
 //se inicializa la camara y el *renderer*.
-escena=new=new THREEScene();
+escena=new THREE.Scene();
 escena.add(malla);
 camara =new THREE.PerspectiveCamera();
 camara.position.z=10;
