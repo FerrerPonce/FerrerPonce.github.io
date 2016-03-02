@@ -17,10 +17,10 @@ THREE.GeometryUtils.merge(forma,esfera2);
 THREE.GeometryUtils.merge(forma,cilindro);
 //se genera la malla a partir de la forma.
 malla =new THREE.Mesh(forma);
-//wireframe=new THREE.Scene();
+wireframe = new THREE.WireframeHelper( malla, 0x00ff00 );
 //se inicializa la camara y el *renderer*.
 escena=new THREE.Scene();
-escena.add(malla);
+ escena.add(malla,wireframe);
 camara =new THREE.PerspectiveCamera();
 camara.position.z=10;
 renderer=new THREE.WebGLRenderer();
@@ -35,6 +35,6 @@ function loop(){
   
   renderer.render(escena,camara);
   }
-  var escena, camara, renderer, malla;
+  var escena, camara, renderer, malla,wireframe;
   setup();
   loop();
