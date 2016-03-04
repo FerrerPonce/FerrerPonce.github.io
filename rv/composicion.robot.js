@@ -2,24 +2,27 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(1);
-var cilindroForma= new THREE.CylinderGeometry(2.5,1,3.5);//torso
+var cilindroForma= new THREE.CylinderGeometry(2,1,3.5);//torso
 var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
 var cilindroForma3= new THREE.CylinderGeometry(0.5,0.5,4);//pierna izquierda y derecha
 var cilindroForma5= new THREE.CylinderGeometry(0.5,0.5,1);//cuello
 var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
-  var esfera1 = new THREE.Mesh(esferaForma);
-  var esfera2 = new THREE.Mesh(esferaForma);
+  var esfera1 = new THREE.Mesh(esferaForma);//pie izquierdo
+  var esfera2 = new THREE.Mesh(esferaForma);//pie derecho
   var cilindro1 = new THREE.Mesh(cilindroForma);
   var cilindro2 = new THREE.Mesh(cilindroForma2);
   var cilindro3 = new THREE.Mesh(cilindroForma3);
   var cilindro4 = new THREE.Mesh(cilindroForma3);
  //se desplazan las mallas
  
- esfera1.position.x=5;
-
- esfera2.position.x=-3;
+ esfera1.position.x=-1;
+ esfera1.position.y=-6;
+ 
+ esfera2.position.x=1;
+ esfera2.position.y=-6;
+ 
  cilindro1.position.x=0;
  cilindro1.position.y=1.75;
  
@@ -66,7 +69,7 @@ var material= new THREE.MeshNormalMaterial();
   //Es importante notar que las rotaciones son sobre los ejes que  estan fijos a la malla, no los ejees del lienzo, inicialmente ambos coincide
   
   //malla.rotation.x +=0.01;
-  malla.rotation.y +=0.01;
+  //malla.rotation.y +=0.01;
   
   renderer.render(escena,camara);
 }
