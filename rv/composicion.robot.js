@@ -7,7 +7,7 @@ var cilindroForma= new THREE.CylinderGeometry(2,1,3.5);//torso
 var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
 var cilindroForma3= new THREE.CylinderGeometry(0.5,0.5,4);//pierna izquierda y derecha
 var cilindroForma4= new THREE.CylinderGeometry(0.3,0.3,1);//cuello
-var material= new THREE.MeshNormalMaterial();
+var material= new THREE.MeshLambertMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
   var esfera1 = new THREE.Mesh(esferaForma);//pie izquierdo
