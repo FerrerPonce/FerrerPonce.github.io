@@ -2,7 +2,7 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(0.5);
-var esferaForma2= new THREE.SphereGeometry(1);
+var esferaForma2= new THREE.SphereGeometry(1.25);
 var cilindroForma= new THREE.CylinderGeometry(2,1,3.5);//torso
 var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
 var cilindroForma3= new THREE.CylinderGeometry(0.5,0.5,4);//pierna izquierda y derecha
