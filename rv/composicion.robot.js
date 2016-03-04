@@ -2,7 +2,7 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(0.5);
-var esferaForma2= new THREE.SphereGeometry(2);
+var esferaForma2= new THREE.SphereGeometry(1);
 var cilindroForma= new THREE.CylinderGeometry(2,1,3.5);//torso
 var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
 var cilindroForma3= new THREE.CylinderGeometry(0.5,0.5,4);//pierna izquierda y derecha
@@ -14,8 +14,8 @@ var material= new THREE.MeshNormalMaterial();
   var esfera2 = new THREE.Mesh(esferaForma);//pie derecho
   var esfera3 = new THREE.Mesh(esferaForma);//mano isq
   var esfera4 = new THREE.Mesh(esferaForma);//mano derecha
-  var esfera5 = new THREE.Mesh(esferaForma);//mano isq
-  var esfera6 = new THREE.Mesh(esferaForma);//mano derecha
+  var esfera5 = new THREE.Mesh(esferaForma);//hombro isq
+  var esfera6 = new THREE.Mesh(esferaForma);//hombro derecha
   var esfera7 = new THREE.Mesh(esferaForma2);//cabeza
   var cilindro1 = new THREE.Mesh(cilindroForma);
   var cilindro2 = new THREE.Mesh(cilindroForma2);
@@ -38,10 +38,10 @@ var material= new THREE.MeshNormalMaterial();
  esfera4.position.y=-0.6;
  
  esfera5.position.x=-2.25;
- esfera5.position.y=3;
+ esfera5.position.y=3.1;
  
  esfera6.position.x=2.25;
- esfera6.position.y=3;
+ esfera6.position.y=3.1;
  
  esfera7.position.x=0;
  esfera7.position.y=5.5;
