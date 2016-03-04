@@ -49,6 +49,6 @@ function setup(){
       var escena, camara, renderer;
       var step, piernaD, piernaI;
       
-      setup;
-      loop;
+      setup();
+      loop();
       
