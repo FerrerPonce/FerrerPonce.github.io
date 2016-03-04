@@ -2,7 +2,7 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(1);
-var cilindroForma= new THREE.CylinderGeometry(1.5,0.5,4);
+var cilindroForma= new THREE.CylinderGeometry(2.5,1,3.5);
 var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
@@ -11,11 +11,11 @@ var material= new THREE.MeshNormalMaterial();
   var cilindro = new THREE.Mesh(cilindroForma);
  //se desplazan las mallas
  
- esfera1.position.x=0;
- esfera1.position.y=0;
+ esfera1.position.x=5;
+
  esfera2.position.x=-3;
  cilindro.position.x=0;
- cilindro.position.y=0;
+ cilindro.position.y=1.75;
  
  //se genera una forma geometria abstracta
  
