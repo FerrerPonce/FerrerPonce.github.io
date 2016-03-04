@@ -13,7 +13,7 @@ var material= new THREE.MeshNormalMaterial();
  
  esfera1.position.x=1;
  esfera2.position.x=-1;
- cilindro.position.y=5;
+ cilindro.position.y=1;
  
  //se genera una forma geometria abstracta
  
