@@ -11,8 +11,9 @@ var material= new THREE.MeshNormalMaterial();
   var cilindro = new THREE.Mesh(cilindroForma, material);
  //se desplazan las mallas
  
- esfera1.position.x=2;
- esfera2.position.x=-2;
+ esfera1.position.x=0.5;
+ esfera2.position.x=-0.5;
+ cilindro.position.y=5;
  
  //se genera una forma geometria abstracta
  
