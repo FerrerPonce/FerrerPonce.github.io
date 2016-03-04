@@ -13,8 +13,10 @@ var material= new THREE.MeshNormalMaterial();
   var esfera2 = new THREE.Mesh(esferaForma);//pie derecho
   var cilindro1 = new THREE.Mesh(cilindroForma);
   var cilindro2 = new THREE.Mesh(cilindroForma2);
-  var cilindro3 = new THREE.Mesh(cilindroForma3);
-  var cilindro4 = new THREE.Mesh(cilindroForma3);
+  var cilindro3 = new THREE.Mesh(cilindroForma3);//pierna izq
+  var cilindro4 = new THREE.Mesh(cilindroForma3);//pierna derecha
+  var cilindro5 = new THREE.Mesh(cilindroForma3);//brazo isq
+  var cilindro6 = new THREE.Mesh(cilindroForma3);//brazo derecho
  //se desplazan las mallas
  
  esfera1.position.x=-1;
@@ -35,6 +37,12 @@ var material= new THREE.MeshNormalMaterial();
  cilindro4.position.x=1;
  cilindro4.position.y=-4;
  
+ cilindro5.position.x=-2.5;
+ cilindro5.position.y=1.25;
+ 
+ cilindro6.position.x=2.5;
+ cilindro6.position.y=1.25;
+ 
  //se genera una forma geometria abstracta
   var forma = new THREE.Geometry();
  
@@ -45,6 +53,8 @@ var material= new THREE.MeshNormalMaterial();
  THREE.GeometryUtils.merge(forma, cilindro2);
  THREE.GeometryUtils.merge(forma, cilindro3);
  THREE.GeometryUtils.merge(forma, cilindro4);
+ THREE.GeometryUtils.merge(forma, cilindro5);
+ THREE.GeometryUtils.merge(forma, cilindro6);
  
  //se genera la malla a partir de la forma 
  
