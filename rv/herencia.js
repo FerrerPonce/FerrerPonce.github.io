@@ -1,4 +1,4 @@
-function pierna(){
+function Pierna(){
 //utilizamos las propiedades de Object3D
 THREE.Object3D.call(this);
 
