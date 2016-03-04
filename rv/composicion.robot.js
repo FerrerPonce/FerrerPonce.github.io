@@ -2,8 +2,10 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(1);
-var cilindroForma= new THREE.CylinderGeometry(2.5,1,3.5);
-var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);
+var cilindroForma= new THREE.CylinderGeometry(2.5,1,3.5);//torso
+var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
+var cilindroForma3= new THREE.CylinderGeometry(1,1,4);//pierna izquierda
+var cilindroForma5= new THREE.CylinderGeometry(0.5,0.5,1);//cuello
 var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
@@ -11,6 +13,8 @@ var material= new THREE.MeshNormalMaterial();
   var esfera2 = new THREE.Mesh(esferaForma);
   var cilindro1 = new THREE.Mesh(cilindroForma);
   var cilindro2 = new THREE.Mesh(cilindroForma2);
+  var cilindro3 = new THREE.Mesh(cilindroForma3);
+  var cilindro4 = new THREE.Mesh(cilindroForma3);
  //se desplazan las mallas
  
  esfera1.position.x=5;
@@ -22,15 +26,22 @@ var material= new THREE.MeshNormalMaterial();
  cilindro2.position.x=0;
  cilindro2.position.y=-1;
  
+ cilindro3.position.x=-1;
+ cilindro3.position.y=-4;
+ 
+ cilindro4.position.x=1;
+ cilindro4.position.y=-4;
+ 
  //se genera una forma geometria abstracta
+  var forma = new THREE.Geometry();
  
- var forma = new THREE.Geometry();
  // se utiliza el paqyuete GeometryUtils para conjuntar las formas
- 
  THREE.GeometryUtils.merge(forma, esfera1);
  THREE.GeometryUtils.merge(forma, esfera2);
  THREE.GeometryUtils.merge(forma, cilindro1);
  THREE.GeometryUtils.merge(forma, cilindro2);
+ THREE.GeometryUtils.merge(forma, cilindro3);
+ THREE.GeometryUtils.merge(forma, cilindro4);
  
  //se genera la malla a partir de la forma 
  
