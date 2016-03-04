@@ -28,10 +28,10 @@ var material= new THREE.MeshNormalMaterial();
  esfera2.position.y=-6;
  
  esfera3.position.x=-2.25;
- esfera3.position.y=-0.5;
+ esfera3.position.y=-0.6;
  
  esfera4.position.x=2.25;
- esfera4.position.y=-0.5;
+ esfera4.position.y=-0.6;
  
  cilindro1.position.x=0;
  cilindro1.position.y=1.75;
