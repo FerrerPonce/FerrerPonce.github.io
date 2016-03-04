@@ -20,7 +20,7 @@ var material= new THREE.MeshPhongMaterial();
  // se utiliza el paqyuete GeometryUtils para conjuntar las formas
  
  THREE.GeometryUtils.merge(forma, esfera1);
- THREE.GeometryUtils.merge(forma, esfera2);
+// THREE.GeometryUtils.merge(forma, esfera2);
  THREE.GeometryUtils.merge(forma, cilindro);
  
  //se genera la malla a partir de la forma 
