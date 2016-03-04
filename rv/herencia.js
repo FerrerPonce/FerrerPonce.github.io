@@ -1,4 +1,4 @@
-function Pierna(){
+function pierna(){
 //utilizamos las propiedades de Object3D
 THREE.Object3D.call(this);
 
@@ -15,7 +15,7 @@ this.pie.position.y=1;
 this.add(this.pierna);
 this.add(this.pie);
 }
-Pierna.prototype =new THREE.Object3D();
+pierna.prototype =new THREE.Object3D();
 function setup(){
   var cuerpo =new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
   piernaD=new Pierna();
