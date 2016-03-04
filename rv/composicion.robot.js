@@ -2,7 +2,7 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(1);
-var cilindroForma= new THREE.CylinderGeometry(1,0.5,4);
+var cilindroForma= new THREE.CylinderGeometry(1.5,0.5,4);
 var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
@@ -11,8 +11,8 @@ var material= new THREE.MeshNormalMaterial();
   var cilindro = new THREE.Mesh(cilindroForma);
  //se desplazan las mallas
  
- esfera1.position.x=0.5;
- esfera2.position.x=-0.5;
+ esfera1.position.x=1;
+ esfera2.position.x=-1;
  cilindro.position.y=5;
  
  //se genera una forma geometria abstracta
@@ -46,8 +46,8 @@ var material= new THREE.MeshNormalMaterial();
   requestAnimationFrame(loop);
   //Es importante notar que las rotaciones son sobre los ejes que  estan fijos a la malla, no los ejees del lienzo, inicialmente ambos coincide
   
-  malla.rotation.x +=0.01;
-  malla.rotation.y +=0.01;
+  //malla.rotation.x +=0.01;
+  //malla.rotation.y +=0.01;
   
   renderer.render(escena,camara);
 }
