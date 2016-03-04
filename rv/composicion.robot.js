@@ -12,7 +12,7 @@ var material= new THREE.MeshPhongMaterial();
  //se desplazan las mallas
  
  esfera1.position.y=2;
- esfera2.position.y=-2;
+ esfera2.position.x=-2;
  
  //se genera una forma geometria abstracta
  
