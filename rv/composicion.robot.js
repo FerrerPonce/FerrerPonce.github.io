@@ -11,6 +11,8 @@ var material= new THREE.MeshNormalMaterial();
  
   var esfera1 = new THREE.Mesh(esferaForma);//pie izquierdo
   var esfera2 = new THREE.Mesh(esferaForma);//pie derecho
+  var esfera3 = new THREE.Mesh(esferaForma);//mano isq
+  var esfera4 = new THREE.Mesh(esferaForma);//mano derecha
   var cilindro1 = new THREE.Mesh(cilindroForma);
   var cilindro2 = new THREE.Mesh(cilindroForma2);
   var cilindro3 = new THREE.Mesh(cilindroForma3);//pierna izq
@@ -25,6 +27,12 @@ var material= new THREE.MeshNormalMaterial();
  esfera2.position.x=1;
  esfera2.position.y=-6;
  
+ esfera3.position.x=-2.25;
+ esfera3.position.y=-0.5;
+ 
+ esfera4.position.x=2.25;
+ esfera4.position.y=-0.5;
+ 
  cilindro1.position.x=0;
  cilindro1.position.y=1.75;
  
@@ -37,10 +45,10 @@ var material= new THREE.MeshNormalMaterial();
  cilindro4.position.x=1;
  cilindro4.position.y=-4;
  
- cilindro5.position.x=-2.5;
+ cilindro5.position.x=-2.25;
  cilindro5.position.y=1.25;
  
- cilindro6.position.x=2.5;
+ cilindro6.position.x=2.25;
  cilindro6.position.y=1.25;
  
  //se genera una forma geometria abstracta
@@ -49,6 +57,8 @@ var material= new THREE.MeshNormalMaterial();
  // se utiliza el paqyuete GeometryUtils para conjuntar las formas
  THREE.GeometryUtils.merge(forma, esfera1);
  THREE.GeometryUtils.merge(forma, esfera2);
+ THREE.GeometryUtils.merge(forma, esfera3);
+ THREE.GeometryUtils.merge(forma, esfera4);
  THREE.GeometryUtils.merge(forma, cilindro1);
  THREE.GeometryUtils.merge(forma, cilindro2);
  THREE.GeometryUtils.merge(forma, cilindro3);
