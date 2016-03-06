@@ -9,7 +9,7 @@ this.pie=new THREE.Mesh(new THREE.BoxGeometry(2,1,1));
 //se posicionan las mallas
 this.pierna.position.y=-2.5;
 this.pie.position.y=-4.5;
-this.pie.position.y=1;
+this.pie.position.x=1;
 
 //se agrega object3D
 this.add(this.pierna);
