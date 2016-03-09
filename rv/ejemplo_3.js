@@ -1,6 +1,6 @@
 
 function setup(){
-var forma= new THREE.Boxgeometry(100,100,500);
+var forma= new THREE.BoxGeometry(100,100,500);
 var material= new THREE.MeshDepthMaterial({color: 0x00f00});
 malla= new THREE.Mesh(forma, material);
 
