@@ -12,7 +12,7 @@ camara.position.z=5;
   var renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth*.95, window.innerHeight*.95);
   document.body.appendChild(renderer.domElement);
-  
+}
   function loop(){
             requestAnimationFrame(loop);
             malla.rotation.x+=0.01;
