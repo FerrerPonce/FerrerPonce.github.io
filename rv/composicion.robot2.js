@@ -11,81 +11,81 @@ var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
   var PieIzq = new THREE.Mesh(esferaForma);//pie izquierdo
-  var esfera2 = new THREE.Mesh(esferaForma);//pie derecho
-  var esfera3 = new THREE.Mesh(esferaForma);//mano isq
-  var esfera4 = new THREE.Mesh(esferaForma);//mano derecha
-  var esfera5 = new THREE.Mesh(esferaForma);//hombro isq
-  var esfera6 = new THREE.Mesh(esferaForma);//hombro derecha
-  var esfera7 = new THREE.Mesh(esferaForma2);//cabeza
-  var cilindro1 = new THREE.Mesh(cilindroForma);
-  var cilindro2 = new THREE.Mesh(cilindroForma2);
-  var cilindro3 = new THREE.Mesh(cilindroForma3);//pierna izq
-  var cilindro4 = new THREE.Mesh(cilindroForma3);//pierna derecha
-  var cilindro5 = new THREE.Mesh(cilindroForma3);//brazo isq
-  var cilindro6 = new THREE.Mesh(cilindroForma3);//brazo derecho
-  var cilindro7 = new THREE.Mesh(cilindroForma4);//brazo derecho
+  var PieDer = new THREE.Mesh(esferaForma);//pie derecho
+  var ManIzq = new THREE.Mesh(esferaForma);//mano isq
+  var ManDer = new THREE.Mesh(esferaForma);//mano derecha
+  var HombIzq = new THREE.Mesh(esferaForma);//hombro isq
+  var HombDer = new THREE.Mesh(esferaForma);//hombro derecha
+  var Cabeza = new THREE.Mesh(esferaForma2);//cabeza
+  var Torso = new THREE.Mesh(cilindroForma);//torso
+  var Cadera = new THREE.Mesh(cilindroForma2);//cadera
+  var PiernIzq = new THREE.Mesh(cilindroForma3);//pierna izq
+  var PiernDer = new THREE.Mesh(cilindroForma3);//pierna derecha
+  var BrazIzq = new THREE.Mesh(cilindroForma3);//brazo isq
+  var BrazDer = new THREE.Mesh(cilindroForma3);//brazo derecho
+  var Cuello = new THREE.Mesh(cilindroForma4);//cuello
  //se desplazan las mallas
  
  PieIzq.position.x=-1;
  PieIzq.position.y=-6;
  
- esfera2.position.x=1;
- esfera2.position.y=-6;
+ PieDer.position.x=1;
+ PieDer.position.y=-6;
  
- esfera3.position.x=-2.25;
- esfera3.position.y=-0.6;
+ ManIzq.position.x=-2.25;
+ ManIzq.position.y=-0.6;
  
- esfera4.position.x=2.25;
- esfera4.position.y=-0.6;
+ ManDer.position.x=2.25;
+ ManDer.position.y=-0.6;
  
- esfera5.position.x=-2.25;
- esfera5.position.y=3.1;
+ HombIzq.position.x=-2.25;
+ HombIzq.position.y=3.1;
  
- esfera6.position.x=2.25;
- esfera6.position.y=3.1;
+ HombDer.position.x=2.25;
+ HombDer.position.y=3.1;
  
- esfera7.position.x=0;
- esfera7.position.y=5.5;
+ Cabeza.position.x=0;
+ Cabeza.position.y=5.5;
  
- cilindro1.position.x=0;
- cilindro1.position.y=1.75;
+ Torso.position.x=0;
+ Torso.position.y=1.75;
  
- cilindro2.position.x=0;
- cilindro2.position.y=-1;
+ Cadera.position.x=0;
+ Cadera.position.y=-1;
  
- cilindro3.position.x=-1;
- cilindro3.position.y=-4;
+ PiernIzq.position.x=-1;
+ PiernIzq.position.y=-4;
  
- cilindro4.position.x=1;
- cilindro4.position.y=-4;
+ PiernDer.position.x=1;
+ PiernDer.position.y=-4;
  
- cilindro5.position.x=-2.25;
- cilindro5.position.y=1.25;
+ BrazIzq.position.x=-2.25;
+ BrazIzq.position.y=1.25;
  
- cilindro6.position.x=2.25;
- cilindro6.position.y=1.25;
+ BrazDer.position.x=2.25;
+ BrazDer.position.y=1.25;
  
- cilindro7.position.x=0;
- cilindro7.position.y=4.375;
+ Cuello.position.x=0;
+ Cuello.position.y=4.375;
  
  //se genera una forma geometria abstracta
   var forma = new THREE.Geometry();
  
  // se utiliza el paqyuete GeometryUtils para conjuntar las formas
  THREE.GeometryUtils.merge(forma, PieIzq);
- THREE.GeometryUtils.merge(forma, esfera2);
- THREE.GeometryUtils.merge(forma, esfera3);
- THREE.GeometryUtils.merge(forma, esfera4);
- THREE.GeometryUtils.merge(forma, esfera5);
- THREE.GeometryUtils.merge(forma, esfera6);
- THREE.GeometryUtils.merge(forma, esfera7);
- THREE.GeometryUtils.merge(forma, cilindro1);
- THREE.GeometryUtils.merge(forma, cilindro2);
- THREE.GeometryUtils.merge(forma, cilindro3);
- THREE.GeometryUtils.merge(forma, cilindro4);
- THREE.GeometryUtils.merge(forma, cilindro5);
- THREE.GeometryUtils.merge(forma, cilindro6);
- THREE.GeometryUtils.merge(forma, cilindro7);
+ THREE.GeometryUtils.merge(forma, PieDer);
+ THREE.GeometryUtils.merge(forma, ManIzq);
+ THREE.GeometryUtils.merge(forma, ManDer);
+ THREE.GeometryUtils.merge(forma, HombIzq);
+ THREE.GeometryUtils.merge(forma, HombDer);
+ THREE.GeometryUtils.merge(forma, Cabeza);
+ THREE.GeometryUtils.merge(forma, Torso);
+ THREE.GeometryUtils.merge(forma, Cadera);
+ THREE.GeometryUtils.merge(forma, PiernIzq);
+ THREE.GeometryUtils.merge(forma, PiernDer);
+ THREE.GeometryUtils.merge(forma, BrazIzq);
+ THREE.GeometryUtils.merge(forma, BrazDer);
+ THREE.GeometryUtils.merge(forma, Cuello);
  
  //se genera la malla a partir de la forma 
  
