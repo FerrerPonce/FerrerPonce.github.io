@@ -2,19 +2,19 @@ function Robotina(){
 //se plantea las geometrias a utillixzar
 THREE.Object3D.call(this);//utilizamos las propiedades de Object3D
 
-var esferaForma= new THREE.SphereGeometry(0.5);
-var esferaForma2= new THREE.SphereGeometry(1.25);
-var cilindroForma= new THREE.CylinderGeometry(2,1,3.5);//torso
-var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
-var cilindroForma3= new THREE.CylinderGeometry(0.5,0.5,4);//pierna izquierda y derecha
-var cilindroForma4= new THREE.CylinderGeometry(0.3,0.3,2);//cuello
-var material= new THREE.MeshNormalMaterial();
+//var esferaForma= new THREE.SphereGeometry(0.5);
+//var esferaForma2= new THREE.SphereGeometry(1.25);
+//var cilindroForma= new THREE.CylinderGeometry(2,1,3.5);//torso
+//var cilindroForma2= new THREE.CylinderGeometry(1,2.5,2);//cadera
+//var cilindroForma3= new THREE.CylinderGeometry(0.5,0.5,4);//pierna izquierda y derecha
+//var cilindroForma4= new THREE.CylinderGeometry(0.3,0.3,2);//cuello
+//var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
-  this.PieIzq = new THREE.Mesh(esferaForma);//pie izquierdo
-  this.PieDer = new THREE.Mesh(esferaForma);//pie derecho
-  this.PiernIzq = new THREE.Mesh(cilindroForma3);//pierna izq
-  this.PiernDer = new THREE.Mesh(cilindroForma3);//pierna derecha
+  this.PieIzq = new THREE.Mesh(new THREE.SphereGeometry(0.5));//pie izquierdo
+  this.PieDer = new THREE.Mesh(new THREE.SphereGeometry(0.5));//pie derecho
+  this.PiernIzq = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//pierna izq
+  this.PiernDer = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//pierna derecha
   
  
  //se desplazan las mallas
@@ -38,17 +38,17 @@ var material= new THREE.MeshNormalMaterial();
 }
 Robotina.prototype =new THREE.Object3D();
 function setup(){
-  var ManIzq = new THREE.Mesh(esferaForma);//mano isq
-  var ManDer = new THREE.Mesh(esferaForma);//mano derecha
-  var HombIzq = new THREE.Mesh(esferaForma);//hombro isq
-  var HombDer = new THREE.Mesh(esferaForma);//hombro derecha
-  var Cabeza = new THREE.Mesh(esferaForma2);//cabeza
-  var Torso = new THREE.Mesh(cilindroForma);//torso
-  var Cadera = new THREE.Mesh(cilindroForma2);//cadera
+  var ManIzq = new THREE.Mesh(new THREE.SphereGeometry(0.5));//mano isq
+  var ManDer = new THREE.Mesh(new THREE.SphereGeometry(0.5));//mano derecha
+  var HombIzq = new THREE.Mesh(new THREE.SphereGeometry(0.5));//hombro isq
+  var HombDer = new THREE.Mesh(new THREE.SphereGeometry(0.5));//hombro derecha
+  var Cabeza = new THREE.Mesh(new THREE.SphereGeometry(1.25));//cabeza
+  var Torso = new THREE.Mesh( new THREE.CylinderGeometry(2,1,3.5));//torso
+  var Cadera = new THREE.Mesh(new THREE.CylinderGeometry(1,2.5,2));//cadera
  
-  var BrazIzq = new THREE.Mesh(cilindroForma3);//brazo isq
-  var BrazDer = new THREE.Mesh(cilindroForma3);//brazo derecho
-  var Cuello = new THREE.Mesh(cilindroForma4);//cuello
+  var BrazIzq = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//brazo isq
+  var BrazDer = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//brazo derecho
+  var Cuello = new THREE.Mesh(new THREE.CylinderGeometry(0.3,0.3,2));//cuello
   
    ManIzq.position.x=-2.25;
  ManIzq.position.y=-0.6;
