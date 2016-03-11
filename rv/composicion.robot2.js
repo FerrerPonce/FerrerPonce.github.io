@@ -146,8 +146,8 @@ function setup(){
   if(Math.abs(piernaD.rotation.z)>.5)
     step = -step;
     
-      piernaD.rotation.z+=step;
-      piernaI.rotation.z-=step;
+      PiernaD.rotation.z+=step;
+      PiernaI.rotation.z-=step;
  Robotina().rotation.x +=0.01;
  Robotina().rotation.y +=0.01;
   
