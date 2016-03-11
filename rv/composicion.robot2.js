@@ -83,7 +83,7 @@ function setup(){
  
  PiernaD= new Robotina();
  PiernaI=new Robotina();
- //PiernaD.position.z=-1;
+ PiernaD.position.x=-1;
  //PiernaI.position.z=1;
  
  step=0.01;
