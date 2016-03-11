@@ -117,8 +117,8 @@ function setup(){
  
  escena= new THREE.Scene();
  //escena.add(malla);
- escena.add(PiernaD);
- escena.add(PiernaI);
+ //escena.add(PiernaD);
+ //escena.add(PiernaI);
  escena.add(ManIzq);
  escena.add(ManDer);
  escena.add(HombIzq);
@@ -143,11 +143,11 @@ function setup(){
   requestAnimationFrame(loop);
   renderer.render(escena,camara);
   //Es importante notar que las rotaciones son sobre los ejes que  estan fijos a la malla, no los ejees del lienzo, inicialmente ambos coincide
-  if(Math.abs(PiernaD.rotation.z)>.5)
+  if(Math.abs(PiernaD.rotation.y)>.5)
     step = -step;
     
-      PiernaD.rotation.z+=step;
-      PiernaI.rotation.z-=step;
+      PiernaD.rotation.y+=step;
+      PiernaI.rotation.y-=step;
  //malla.rotation.x +=0.01;
  //malla.rotation.y +=0.01;
   
