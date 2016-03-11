@@ -10,7 +10,7 @@ var cilindroForma4= new THREE.CylinderGeometry(0.3,0.3,2);//cuello
 var material= new THREE.MeshNormalMaterial();
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
-  var esfera1 = new THREE.Mesh(esferaForma);//pie izquierdo
+  var PieIzq = new THREE.Mesh(esferaForma);//pie izquierdo
   var esfera2 = new THREE.Mesh(esferaForma);//pie derecho
   var esfera3 = new THREE.Mesh(esferaForma);//mano isq
   var esfera4 = new THREE.Mesh(esferaForma);//mano derecha
@@ -26,8 +26,8 @@ var material= new THREE.MeshNormalMaterial();
   var cilindro7 = new THREE.Mesh(cilindroForma4);//brazo derecho
  //se desplazan las mallas
  
- esfera1.position.x=-1;
- esfera1.position.y=-6;
+ PieIzq.position.x=-1;
+ PieIzq.position.y=-6;
  
  esfera2.position.x=1;
  esfera2.position.y=-6;
@@ -72,7 +72,7 @@ var material= new THREE.MeshNormalMaterial();
   var forma = new THREE.Geometry();
  
  // se utiliza el paqyuete GeometryUtils para conjuntar las formas
- THREE.GeometryUtils.merge(forma, esfera1);
+ THREE.GeometryUtils.merge(forma, PieIzq);
  THREE.GeometryUtils.merge(forma, esfera2);
  THREE.GeometryUtils.merge(forma, esfera3);
  THREE.GeometryUtils.merge(forma, esfera4);
