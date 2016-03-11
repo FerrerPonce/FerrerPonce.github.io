@@ -1,4 +1,4 @@
-function setup(){
+function Robotina(){
 //se plantea las geometrias a utillixzar
 
 var esferaForma= new THREE.SphereGeometry(0.5);
