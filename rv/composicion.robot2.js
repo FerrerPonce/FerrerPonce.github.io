@@ -143,7 +143,7 @@ function setup(){
   requestAnimationFrame(loop);
   renderer.render(escena,camara);
   //Es importante notar que las rotaciones son sobre los ejes que  estan fijos a la malla, no los ejees del lienzo, inicialmente ambos coincide
-  if(Math.abs(piernaD.rotation.z)>.5)
+  if(Math.abs(PiernaD.rotation.z)>.5)
     step = -step;
     
       PiernaD.rotation.z+=step;
