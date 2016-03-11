@@ -87,7 +87,7 @@ function setup(){
  PiernaI.position.z=1;
  
  step=0.01;
-}
+
 
  
  //se genera una forma geometria abstracta
