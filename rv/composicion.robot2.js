@@ -148,8 +148,8 @@ function setup(){
     
       piernaD.rotation.z+=step;
       piernaI.rotation.z-=step;
- // malla.rotation.x +=0.01;
-  //malla.rotation.y +=0.01;
+ Robotina().rotation.x +=0.01;
+ Robotina().rotation.y +=0.01;
   
  
 }
