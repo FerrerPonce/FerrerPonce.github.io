@@ -12,9 +12,9 @@ THREE.Object3D.call(this);//utilizamos las propiedades de Object3D
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
   this.PieIzq = new THREE.Mesh(new THREE.SphereGeometry(0.5));//pie izquierdo
-  this.PieDer = new THREE.Mesh(new THREE.SphereGeometry(0.5));//pie derecho
+  //this.PieDer = new THREE.Mesh(new THREE.SphereGeometry(0.5));//pie derecho
   this.PiernIzq = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//pierna izq
-  this.PiernDer = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//pierna derecha
+  //this.PiernDer = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4));//pierna derecha
   
  
  //se desplazan las mallas
@@ -22,19 +22,19 @@ THREE.Object3D.call(this);//utilizamos las propiedades de Object3D
  this.PieIzq.position.x=-1;
  this.PieIzq.position.y=-6;
  
- this.PieDer.position.x=1;
- this.PieDer.position.y=-6;
+ //this.PieDer.position.x=1;
+ //this.PieDer.position.y=-6;
  
  this.PiernIzq.position.x=-1;
  this.PiernIzq.position.y=-4;
  
- this.PiernDer.position.x=1;
- this.PiernDer.position.y=-4;
+ //this.PiernDer.position.x=1;
+ //this.PiernDer.position.y=-4;
  
  this.add(this.PieIzq);
  this.add(this.PiernIzq);
- this.add(this.PieDer);
- this.add(this.PiernDer);
+ //this.add(this.PieDer);
+ //this.add(this.PiernDer);
 }
 Robotina.prototype =new THREE.Object3D();
 function setup(){
