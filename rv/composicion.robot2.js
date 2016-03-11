@@ -117,8 +117,8 @@ function setup(){
  
  escena= new THREE.Scene();
  //escena.add(malla);
- //escena.add(PiernaD);
- //escena.add(PiernaI);
+ escena.add(PiernaD);
+ escena.add(PiernaI);
  escena.add(ManIzq);
  escena.add(ManDer);
  escena.add(HombIzq);
