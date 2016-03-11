@@ -116,7 +116,7 @@ function setup(){
  //Se inicializa la escena y se agrega la malla a esta 
  
  escena= new THREE.Scene();
- escena.add(malla);
+ //escena.add(malla);
  escena.add(PiernaD);
  escena.add(PiernaI);
  escena.add(ManIzq);
