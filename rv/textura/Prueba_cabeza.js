@@ -1,6 +1,6 @@
 function setup(){
 	THREE.ImageUtils.crossOrigin='';
- var textura=THREE.ImageUtils.loadTexture("earth_atmos_2048.jpg");
+ var textura=THREE.ImageUtils.loadTexture("cabeza.jpg");
  var material=new THREE.MeshPhongMaterial({map:textura});
  var forma=new THREE.SphereGeometry(1);
  malla=new THREE.Mesh(forma,material);
