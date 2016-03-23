@@ -2,7 +2,8 @@ function setup(){
 	THREE.ImageUtils.crossOrigin='';
  var textura=THREE.ImageUtils.loadTexture("cabeza.jpg");
  var material=new THREE.MeshBasicMaterial({map:textura});
- var forma=new THREE.SphereGeometry(1);
+ var forma=new THREE.BoxGeometry(1,1,1);
+ //var forma=new THREE.SphereGeometry(1);
  malla=new THREE.Mesh(forma,material);
  malla.rotation.z += 0.25;
 
