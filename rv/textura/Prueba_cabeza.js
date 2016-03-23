@@ -2,8 +2,8 @@ function setup(){
 	THREE.ImageUtils.crossOrigin='';
  var textura=THREE.ImageUtils.loadTexture("cabeza.jpg");
  var material=new THREE.MeshBasicMaterial({map:textura});
- var forma=new THREE.BoxGeometry(1,1,1);
- //var forma=new THREE.SphereGeometry(1);
+ //var forma=new THREE.BoxGeometry(1,1,1);
+ var forma=new THREE.SphereGeometry(10);
  malla=new THREE.Mesh(forma,material);
  malla.rotation.z += 0.25;
 
@@ -17,7 +17,7 @@ var luzPuntual=new THREE.PointLight(0xffffff);
 	escena.add(luzPuntual);
 
 camara=new THREE.PerspectiveCamera();
-camara.position.z=5;
+camara.position.z=15;
 
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
