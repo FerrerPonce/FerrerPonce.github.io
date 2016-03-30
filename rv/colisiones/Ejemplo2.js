@@ -5,8 +5,8 @@ cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),
                     new THREE.MeshNormalMaterial());
 pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
                     new THREE.MeshNormalMaterial());
- cubo1.position.x=0.7;
- cubo2.position.x=-0.7;
+ cubo1.position.x=7;
+ cubo2.position.x=-7;
     
     camara= new THREE.Perspective.Camera();
     camara.position.z=20;
@@ -15,10 +15,10 @@ pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
     raycaster2 =new THREE.Raycaster( pelota.position, new THREE.vector3(-1,0,0));
     
     escena =new THREE.Scene();
-    escena.add (cubo1);
-    escena.add (cubo2);
-    escena.add (pelota);
-    escena.add (camara);
+    escena.add(cubo1);
+    escena.add(cubo2);
+    escena.add(pelota);
+    escena.add(camara);
     
     renderer=new THREE.WebGLRenderer();
     renderer.setSize(window.innerHeight*.95, 
@@ -31,10 +31,10 @@ pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
 function loop(){
  obstaculo1= raycaster.intersectObject (cubo1);
  obstaculo2= raycaster.intersectObject (cubo2);
- if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
+ if ((obstaculo1.length > 0 && (obstaculo1[0].distance <= 0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
  step=-step;
  
- pelota.position.x+=step;
+ pelota.position.x += step;
  raycaster1.set(pelota.position, new THREE.Vector3(1,0,0) );
   raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0) );
   
