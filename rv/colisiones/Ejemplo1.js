@@ -9,5 +9,11 @@ cubo1= new THREE.Mesh (new THREE.BoxGeometry(1,1,1),
     camara= new THREE.Perspective.Camera();
     camara.position.z=5;
     
-    raycaster =nwe THREE.Raycaster();
+    raycaster =new THREE.Raycaster();
     raycaster.setFormCamera (new THREE.Vector2 (0,0), camara);
+    
+    
+    function loop(){
+      var intersects= raycaster.IntersectsObjects(escena.children);
+      if(intersects.length >)
+    }
