@@ -28,3 +28,24 @@ pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
   step=0.01;
 }
 
+function loop(){
+ obstaculo1= raycaster.intersectObject (cubo1);
+ obstaculo2= raycaster.intersectObject (cubo2);
+ if ((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5)) || ((obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
+ step=-step;
+ 
+ pelota.position.x+=step;
+ raycaster1.set(pelota.position, new THREE.Vector3(1,0,0) );
+  raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0) );
+  
+  renderer.render(escena, camara);
+  requestAnimationFrame(loop);
+  
+}
+
+var cubo1, cubo2, pelota, escena, camara, renderer;
+var raycaster1, raycaster2, step;
+var obstaculo1, obstaculo2;
+
+setup;
+loop;
