@@ -8,7 +8,7 @@ pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
  cubo1.position.x=7;
  cubo2.position.x=-7;
     
-    camara= new THREE.Perspective.Camera();
+    camara= new THREE.PerspectiveCamera();
     camara.position.z=20;
     
      raycaster1 =new THREE.Raycaster( pelota.position, new THREE.vector3(1,0,0));
