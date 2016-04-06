@@ -1,51 +1,23 @@
-function setup(){
-cubo1= new THREE.Mesh (new THREE.BoxGeometry(1,1,1),
-                      new THREE.MeshNormalMaterial());
-cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),
-                    new THREE.MeshNormalMaterial());
-pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
-                    new THREE.MeshNormalMaterial());
- cubo1.position.x=7;
- cubo2.position.x=-7;
-    
-    camara= new THREE.PerspectiveCamera();
-    camara.position.z=20;
-    
-     raycaster1 =new THREE.Raycaster( pelota.position, new THREE.Vector3(1,0,0));
-    raycaster2 =new THREE.Raycaster( pelota.position, new THREE.Vector3(-1,0,0));
-    
-    escena =new THREE.Scene();
-    escena.add(cubo1);
-    escena.add(cubo2);
-    escena.add(pelota);
-    escena.add(camara);
-    
-    renderer=new THREE.WebGLRenderer();
-    renderer.setSize(window.innerHeight*.95, 
-                    window.innerHeight*.95);
-  
-  document.body.appendChild(renderer.domElement);
-  step=0.01;
-}
-
-function loop(){
- obstaculo1= raycaster1.intersectObject (cubo1);
- obstaculo2= raycaster2.intersectObject (cubo2);
- if ((obstaculo1.length > 0 && (obstaculo1[0].distance <= 0.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
- step=-step;
- 
- pelota.position.x += step;
- raycaster1.set(pelota.position, new THREE.Vector3(1,0,0) );
-  raycaster2.set(pelota.position, new THREE.Vector3(-1,0,0) );
-  
-  renderer.render(escena, camara);
-  requestAnimationFrame(loop);
-  
-}
-
-var cubo1, cubo2, pelota, escena, camara, renderer;
-var raycaster1, raycaster2, step;
-var obstaculo1, obstaculo2;
-
-setup();
-loop();
+<script type="text/javascript" src="some/path/raphael-min.js"></script>
+<script type="text/javascript" src="some/path/spain-map.min.js"></script>
+<script type="text/javascript">
+    new SpainMap({
+      id: 'map', //(Requerido) Elemento HTML en el que se renderizará el mapa
+      width: 700, //(Requerido) Ancho del mapa
+      height: 400, //(Requerido) Alto del mapa
+      fillColor: "#eeeeee", // color de relleno del mapa
+      strokeColor: "#bbbbbb", // color de las líneas de frontera
+      strokeWidth: 0.7, // ancho de las líneas de frontera
+      selectedColor: "#99eeee", // color de relleno de la provincia al pasar el ratón por encima
+      animationDuration: 200, // Duración de la animación de salida
+      onClick: function(province, mouseevent) {
+        // Método que se ejecutará al hacer click sobre una provincia
+      },
+      onMouseOver: function(province, mouseevent) {
+        // Método que se ejecutará al pasar el ratón sobre una provincia
+      },
+      onMouseOut: function(province, mouseevent) {
+        // Método que se ejecutará al salir de una provincia
+      }
+    });
+</script>
