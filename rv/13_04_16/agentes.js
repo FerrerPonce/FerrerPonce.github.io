@@ -22,15 +22,20 @@ Agent.prototype = new THREE.Object3D();
       if(this.children[i].sense !==undefined)
       this.children[1].sense(this);
       }
+    }
+    
+  
     
     Enviroment.prototype.plan=function(){
       for(var i=0; i< this.children.length; i++){
       if(this.children[i].plan !==undefined)
       this.children[1].plan(this);
       }
+    }
       
     Enviroment.prototype.act=function(){
       for(var i=0; i< this.children.length; i++){
       if(this.children[i].act !==undefined)
       this.children[1].act(this);
       }
+    }
