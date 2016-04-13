@@ -5,9 +5,9 @@ this.position.y=y;
 }
 
 Agent.prototype = new THREE.Object3D();
- Agent.enviroment.sense() = function (enviroment{};
-  Agent.entviroment.plan()= function (enviroment{};
-  Agent.entviroment.act()= function (enviroment{};
+ Agent.enviroment.sense() = function (enviroment){};
+  Agent.entviroment.plan()= function (enviroment){};
+  Agent.entviroment.act()= function (enviroment){};
   
   function Enviroment(){
     THREE.Scene.call(this);
