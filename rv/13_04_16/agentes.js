@@ -5,19 +5,19 @@ this.position.y=y;
 }
 
 Agent.prototype = new THREE.Object3D();
- Agent.enviroment.sense() = function (enviroment){};
-  Agent.enviroment.plan()= function (enviroment){};
-  Agent.enviroment.act()= function (enviroment){};
+ Agent.environment.sense() = function (environment){};
+  Agent.environment.plan()= function (environment){};
+  Agent.environment.act()= function (environment){};
   
   function Enviroment(){
     THREE.Scene.call(this);
     }
     
-    Enviroment.prototype =new THREE.Scene();
+    Environment.prototype =new THREE.Scene();
     
-    Enviroment.prototype = new THREE.Scene;
+    Environment.prototype = new THREE.Scene;
     
-    Enviroment.prototype.sence=function(){
+    Environment.prototype.sence=function(){
       for(var i=0; i< this.children.length; i++){
       if(this.children[i].sense !==undefined)
       this.children[1].sense(this);
@@ -26,7 +26,7 @@ Agent.prototype = new THREE.Object3D();
     
   
     
-    Enviroment.prototype.plan=function(){
+    Environment.prototype.plan=function(){
       for(var i=0; i< this.children.length; i++){
       if(this.children[i].plan !==undefined)
       this.children[1].plan(this);
