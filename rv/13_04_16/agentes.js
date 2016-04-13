@@ -13,7 +13,7 @@ Agent.prototype = new THREE.Object3D();
     THREE.Scene.call(this);
     }
     
-    Enviroment.prototype =new THREE Scene();
+    Enviroment.prototype =new THREE.Scene();
     
     Enviroment.prototype = new THREE.Scene;
     
