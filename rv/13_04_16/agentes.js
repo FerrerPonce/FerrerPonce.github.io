@@ -1,5 +1,5 @@
 function Agent (x=0, y=0){
-  TRHEE.Object.Call(this);
+  TRHEE.Object3D.Call(this);
   this.position.x=x;
 this.position.y=y;
 }
