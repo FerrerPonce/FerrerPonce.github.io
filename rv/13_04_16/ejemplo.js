@@ -47,9 +47,9 @@ mapa [22] = "x                       x";
 mapa [23] = "x                       x";
 mapa [24] = "xxxxxxxxxxxxxxxxxxxxxxxxx";
 
-enviroment =new Enviromen();
+environment =new Environmen();
 
-entviroment.setMap (mapa);
+environment.setMap (mapa);
 
 camera= new THREE.PerspectiveCamera();
 camera.position.z=30;
@@ -59,21 +59,21 @@ renderer.setSize(window.innerHeight*.95,
                     window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
-entviroment.add (camera);
+environment.add (camera);
 }
 
 function loop(){
   requestAnimationFrame (loop);
   
-  enviroment.sense();
-  entviroment.plan();
-  entviroment.act();
+  environment.sense();
+  entvironment.plan();
+  entvironment.act();
   
-  entviroment.render(entviroment, camera );
+  environment.render(environment, camera );
   
   }
   
-  var entviroment, camera, renderer;
+  var environment, camera, renderer;
   
   setup();
   loop();
