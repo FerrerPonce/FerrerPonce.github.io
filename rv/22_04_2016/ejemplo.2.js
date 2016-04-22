@@ -1,5 +1,5 @@
 function Wall(size,x,y){
-  //THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
+THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
   this.size=size;
   this.position.x=x;
   this.position.y=y;
@@ -19,9 +19,9 @@ Environment.prototype.setMap=function(map){
 Robot.prototype.plan=function (environment){
   this.actuator.commands=[];
   if (this.sensor.colision==true)
-     THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshLambertMaterial());
+     THREE.Mesh.call(this,new THREE.MeshLambertMaterial());
   else
-     THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
+     THREE.Mesh.call(this,new THREE.MeshNormalMaterial());
 }
 function setup(){
   var mapa = new Array();
