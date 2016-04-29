@@ -2,7 +2,7 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 
-var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
+var cilindroForma= new THREE.CylinderGeometry(1,1,4);
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
   var cilindro = new THREE.Mesh(cilindroForma);
@@ -35,7 +35,7 @@ var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
   requestAnimationFrame(loop);
   //Es importante notar que las rotaciones son sobre los ejes que  estan fijos a la malla, no los ejees del lienzo, inicialmente ambos coincide
   
-  malla.rotation.x +=0.01;
+  //malla.rotation.x +=0.01;
   malla.rotation.y +=0.01;
   
   renderer.render(escena,camara);
