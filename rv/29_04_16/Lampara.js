@@ -1,7 +1,7 @@
 function setup(){
 	malla= new THREE.Mesh(new THREE.CylinderGeometry(1,1,4,100),new THREE.MeshPhongMaterial({color: 0xff0000}));
-	malla.position.y +=2;
-	malla.position.z +=3;
+	malla.position.y +=5;
+	malla.position.z +=0.25;
 
 	var base = new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshPhongMaterial({color: 0x00ff00}));
 
