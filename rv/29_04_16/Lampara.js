@@ -2,7 +2,7 @@ function setup(){
 //se plantea las geometrias a utillixzar
 
 
-var cilindroForma= new THREE.CylinderGeometry(1,1,4);
+var cilindroForma= new THREE.CylinderGeometry(1,1,4,100);
  //Para generar una forma combinada se requiere de las mallas poaras poder desplazar las formas en el espacio virtual
  
   var cilindro = new THREE.Mesh(cilindroForma);
