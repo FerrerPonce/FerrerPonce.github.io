@@ -1,5 +1,5 @@
 function setup(){
-	malla= new THREE.Mesh(new THREE.CylinderGeometry(1,1,4,100),new THREE.MeshPhongMaterial({color: 0xff0000}));
+	malla= new THREE.Mesh(new THREE.CylinderGeometry(1,1,4,100),new THREE.MeshNormalMaterial({color: 0xff0000}));
 	malla.transparent=true;
 	malla.opacity=0.9;
 	malla.position.y +=3;
