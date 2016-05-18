@@ -1,4 +1,4 @@
-finction plano(){
+function plano(){
 THREE.Object3D.call(this);
  this.cuadro = new THREE.Mesh(new THREE.PlaneGeometry( 5, 20, 32 ),new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} ));
 
