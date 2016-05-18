@@ -17,8 +17,8 @@ this.cuadro.position.y=1;
 	luzPuntual.position.y=10;
 	luzPuntual.position.z=10;
 	
- cuadro1= new Robotina();
- cuadro2=new Robotina();
+ cuadro1= new Plano();
+ cuadro2=new Plano();
  cuadro1.position.x=2;
  
 	 step=0.01;
