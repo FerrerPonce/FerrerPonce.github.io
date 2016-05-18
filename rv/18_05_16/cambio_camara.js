@@ -39,6 +39,6 @@ this.cuadro.position.y=1;
   renderer.render(escena,camara);
  }
   var escena, camara, renderer; //malla;
-var step, cuadri1, cuadro2;
+var step, cuadro1, cuadro2;
 setup();
 loop();
