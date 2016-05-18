@@ -1,4 +1,4 @@
-function plano(){
+function Plano(){
 THREE.Object3D.call(this);
  this.cuadro = new THREE.Mesh(new THREE.PlaneGeometry( 5, 20, 32 ),new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} ));
 
@@ -9,7 +9,7 @@ this.cuadro.position.y=1;
 //añadimos el objeto
  this.add(this.cuadro);
  
- Perspectiva.prototype =new THREE.Object3D();
+ Plano.prototype =new THREE.Object3D();
  function setup(){
 	//Se declara un punto de luz
 	var luzPuntual=new THREE.PointLight(0xCC00CC);
