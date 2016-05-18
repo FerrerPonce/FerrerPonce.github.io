@@ -37,7 +37,7 @@ this.cuadro.position.y=1;
  function loop() {
   requestAnimationFrame(loop);
   renderer.render(escena,camara);
-  
+ }
   var escena, camara, renderer; //malla;
 var step, cuadri1, cuadro2;
 setup();
