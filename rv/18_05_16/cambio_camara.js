@@ -1,6 +1,6 @@
 function Plano(){
 THREE.Object3D.call(this);
- this.cuadro = new THREE.Mesh(new THREE.PlaneGeometry( 5, 10, 15 ),new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} ));
+ this.cuadro = new THREE.Mesh(new THREE.PlaneGeometry( 5, 10, 15 ),new THREE.MeshLambertMaterial({color: '#ffffff', side: THREE.DoubleSide} ));
 
 //definimos la posicion 
 this.cuadro.position.x=1;
