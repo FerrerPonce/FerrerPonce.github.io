@@ -8,7 +8,7 @@ this.cuadro.position.y=1;
 
 //añadimos el objeto
  this.add(this.cuadro);
- 
+}
  Plano.prototype =new THREE.Object3D();
  function setup(){
 	//Se declara un punto de luz
