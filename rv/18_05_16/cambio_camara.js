@@ -25,7 +25,7 @@ this.cuadro.position.y=1;
 	  escena= new THREE.Scene();
  //escena.add(malla);
  escena.add(cuadro1);
-  escena.add(cuadro2);
+ // escena.add(cuadro2);
   escena.add(luzPuntual);
  
   camara= new THREE.PerspectiveCamera();
