@@ -1,2 +1,3 @@
 # FerrerPonce.github.io
-Diana
+UPIITA - IPN
+Diana Ferrer Ponce
